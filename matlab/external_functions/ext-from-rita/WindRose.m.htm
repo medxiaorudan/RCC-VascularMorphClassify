@@ -1,0 +1,880 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      
+      	<script type="text/javascript" src="/includes_content/nextgen/scripts/jquery/jquery-latest.js"></script>
+      <!-- START OF GLOBAL NAV -->
+  <link rel="stylesheet" href="/matlabcentral/css/sitewide.css" type="text/css">
+  <link rel="stylesheet" href="/matlabcentral/css/mlc.css" type="text/css">
+  <!--[if lt IE 7]>
+  <link href="/matlabcentral/css/ie6down.css" type="text/css" rel="stylesheet">
+  <![endif]-->
+
+      
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="file exchange, matlab answers, newsgroup access, link exchange, matlab blog, matlab central, simulink blog, matlab community, matlab and simulink community">
+<meta name="description" content="File exchange, MATLAB Answers, newsgroup access, Links, and Blogs for the MATLAB &amp; Simulink user community">
+<link rel="stylesheet" href="/matlabcentral/css/fileexchange.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="print" href="/matlabcentral/css/print.css" />
+<title> File Exchange - MATLAB Central</title>
+<script src="/matlabcentral/fileexchange/assets/application.js" type="text/javascript"></script>
+<link href="/matlabcentral/fileexchange/assets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/matlabcentral/fileexchange/assets/profile_link/application.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/includes_content/responsive/fonts/mw_font.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/matlabcentral/fileexchange/assets/profile_link/application.js" type="text/javascript"></script>
+<link href="http://www.mathworks.com/matlabcentral/fileexchange/47248-wind-rose/content/WindRose.m" rel="canonical" />
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Search File Exchange" href="/matlabcentral/fileexchange/search.xml" />
+
+
+  </head>
+    <body>
+      <div id="header">
+  <div class="wrapper">
+  <!--put nothing in left div - only 11px wide shadow --> 
+    <div class="main">
+        	<div id="logo"><a href="/matlabcentral/?s_tid=gn_mlc_logo" title="MATLAB Central Home"><img src="/matlabcentral/images/mlclogo-whitebgd.gif" alt="MATLAB Central" /></a></div>
+      
+        <div id="headertools">      
+
+<script language="JavaScript1.3" type="text/javascript">
+
+function submitForm(query){
+
+	choice = document.forms['searchForm'].elements['search_submit'].value;
+	
+	if (choice == "entire1" || choice == "contest" || choice == "matlabcentral" || choice == "blogs"){
+	
+	   var newElem = document.createElement("input");
+	   newElem.type = "hidden";
+	   newElem.name = "q";
+	   newElem.value = query.value;
+	   document.forms['searchForm'].appendChild(newElem);
+	      
+	   submit_action = '/searchresults/';
+	}
+	
+	switch(choice){
+	   case "matlabcentral":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "matlabcentral";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 0;
+	      break
+	   case "fileexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/fileexchange/";
+	      selected_index = 1;
+	      break
+	   case "answers":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/answers/";
+	      selected_index = 2;
+	      break
+	   case "cssm":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search_string";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+		  submit_action = "/matlabcentral/newsreader/search_results";
+	      selected_index = 3;
+	      break
+	   case "linkexchange":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/linkexchange/";
+	      selected_index = 4;
+	      break
+	   case "blogs":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "blogs";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 5;
+	      break
+	   case "trendy":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "search";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/trendy";
+	      selected_index = 6;
+	      break
+	   case "cody":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "term";
+	      newElem.value = query.value;
+	      newElem.classname = "formelem";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      submit_action = "/matlabcentral/cody/";
+	      selected_index = 7;
+	      break
+	   case "contest":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "contest";
+	      document.forms['searchForm'].appendChild(newElem);
+	
+	      selected_index = 8;
+	      break
+	   case "entire1":
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	      
+	      selected_index = 9;
+	      break
+	   default:
+	      var newElem = document.createElement("input");
+	      newElem.type = "hidden";
+	      newElem.name = "c[]";
+	      newElem.value = "entiresite";
+	      document.forms['searchForm'].appendChild(newElem);
+	   
+	      selected_index = 9;
+	      break
+	}
+
+	document.forms['searchForm'].elements['search_submit'].selectedIndex = selected_index;
+	document.forms['searchForm'].elements['query'].value = query.value;
+	document.forms['searchForm'].action = submit_action;
+}
+
+</SCRIPT>
+
+
+  <form name="searchForm" method="GET" action="" style="margin:0px; margin-top:5px; font-size:90%" onSubmit="submitForm(query)">
+          <label for="search">Search: </label>
+        <select name="search_submit" style="font-size:9px ">
+         	 <option value = "matlabcentral">MATLAB Central</option>
+          	<option value = "fileexchange" selected>&nbsp;&nbsp;&nbsp;File Exchange</option>
+          	<option value = "answers">&nbsp;&nbsp;&nbsp;Answers</option>
+            <option value = "cssm">&nbsp;&nbsp;&nbsp;Newsgroup</option>
+          	<option value = "linkexchange">&nbsp;&nbsp;&nbsp;Link Exchange</option>
+          	<option value = "blogs">&nbsp;&nbsp;&nbsp;Blogs</option>
+          	<option value = "trendy">&nbsp;&nbsp;&nbsp;Trendy</option>
+          	<option value = "cody">&nbsp;&nbsp;&nbsp;Cody</option>
+          	<option value = "contest">&nbsp;&nbsp;&nbsp;Contest</option>
+          <option value = "entire1">MathWorks.com</option>
+        </select>
+<input type="text" name="query" size="10" class="formelem" value="">
+<input type="submit" value="Go" class="formelem gobutton" >
+</form>
+
+		  <ol id="access2">
+  <li class="first">
+    <a href="https://www.mathworks.com/accesslogin/createProfile.do?uri=http%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Ffileexchange%2F47248-wind-rose%2Fcontent%2FWindRose" id="create_account_link">Create Account</a>
+  </li>
+  <li>
+    <a href="https://www.mathworks.com/accesslogin/index_fe.do?uri=http%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Ffileexchange%2F47248-wind-rose%2Fcontent%2FWindRose" id="login_link">Log In</a>
+  </li>
+</ol>
+
+
+      </div>
+	  
+        <div id="globalnav">
+        <!-- from includes/global_nav.html -->
+        <ol>
+                <li class=";" >
+                        <a href="/matlabcentral/fileexchange/?s_tid=gn_mlc_fx">File Exchange</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/answers/?s_tid=gn_mlc_an">Answers</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/newsreader/?s_tid=gn_mlc_ng">Newsgroup</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/linkexchange/?s_tid=gn_mlc_lx">Link Exchange</a> 
+                </li>
+                <li class=";" >
+                        <a href="http://blogs.mathworks.com/?s_tid=gn_mlc_blg">Blogs</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/trendy/?s_tid=gn_mlc_tnd">Trendy</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/cody/?s_tid=gn_mlc_cody">Cody</a> 
+                </li>
+                <li class=";" >
+                        <a href="/matlabcentral/contest/?s_tid=gn_mlc_cn">Contest</a> 
+                </li>
+                <li class="icon mathworks" >
+                        <a href="/?s_tid=gn_mlc_main">MathWorks.com</a> 
+                </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div id="middle">
+  <div class="wrapper">
+
+    <div id="mainbody" class="columns2">
+  
+  
+
+  <div class="manifest">
+
+    <div id="download_zip_button">
+            <div class="btnCont ctaBtn ctaBlueBtn btnSmall">
+              <div class="btn download"><a href="/matlabcentral/fileexchange/submissions/47248/v/2/download/zip" class="link--download  nologin" title="Download Now">Download Zip</a></div>
+            </div>
+          </div>
+
+
+      <p class="license">
+      Code covered by the <a href="/matlabcentral/fileexchange/view_license?file_info_id=47248" popup="new_window height=500,width=640,scrollbars=yes">BSD License</a>
+      <a href="/matlabcentral/fileexchange/help_license#bsd" class="info notext preview_help" onclick="window.open(this.href,'small','toolbar=no,resizable=yes,status=yes,menu=no,scrollbars=yes,width=600,height=550');return false;">&nbsp;</a>
+  </p>
+
+
+
+  
+  <h3 class="highlights_title">Highlights from <br/>
+    <a href="http://www.mathworks.com/matlabcentral/fileexchange/47248-wind-rose" class="manifest_title">Wind Rose</a>
+  </h3>
+  <ul class='manifest'>
+      <li class='manifest'><a href="http://www.mathworks.com/matlabcentral/fileexchange/47248-wind-rose/content/WindRose.m" class="function" title="Function">WindRose.m</a></li>
+    <li class="manifest_allfiles">
+      <a href="http://www.mathworks.com/matlabcentral/fileexchange/47248-wind-rose/content/WindRose.zip" id="view_all_files">View all files</a>
+    </li>
+  </ul>
+
+</div>
+
+
+  <table cellpadding="0" cellspacing="0" class="details file contents">
+    <tr>
+      <th class="maininfo">
+        
+  <div id="thumbnail" style="padding-bottom: 3px;">
+    <a href="/matlabcentral/fileexchange/screenshots/21970/original.jpg" border="0"><img itemprop="image" src="/matlabcentral/fileexchange/screenshots/21970/preview.jpg" width=100 alt="image thumbnail"/></a>
+  </div>
+
+
+<div id="details">
+  <h1 itemprop="name">Wind Rose</h1>
+  <p id="author">
+    by 
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name"><a href="/matlabcentral/profile/authors/3246794-daniel-pereira" class="author_inline results_author" data-cp-link-id="1">Daniel Pereira</a>
+
+<div class="profile mlc_author_popover" data-cp-popup-id="1" vocab="http://schema.org/" typeof="Person">
+  <h3 class="profile__name" property="name"><a href="/matlabcentral/profile/authors/3246794-daniel-pereira">Daniel Pereira</a></h3>
+    <div class="profile__image" style="background-image:url('/matlabcentral/images/profilepic_default.gif')">
+    </div>
+  <div class="profile__stats" typeof="CreativeWork">
+    
+  <ul>
+    <li property="fileExchange">
+      <span class="icon-fileexchange"></span> <a href="/matlabcentral/fileexchange/?term=authorid%3A226288"><span property="fileExchange_count">4</span> files</a>
+    </li>
+    <li property="downloads">
+      <span class="icon-download"></span> <span property="downloads_count">130</span> downloads
+    </li>
+      <li property="rating">
+
+        <div class="rating" title="4.95833">
+          <div class="rate_scale">
+            <div class="rated" property="aggregateRating" style="width: 99.1666%">4.95833</div>
+          </div>
+        </div>
+
+      </li>
+  </ul>
+
+  </div>
+</div>
+</span>
+    </span>
+  </p>
+  <p>&nbsp;</p>
+  <p>
+    <span id="submissiondate" 
+>
+      16 Jul 2014
+    </span>
+      <span id="date_updated">(Updated 
+        <span itemprop="datePublished" content="2014-07-29">29 Jul 2014</span>)
+      </span>
+  </p>
+
+  <p id="summary">Graph and table for Direction-Intensity data</p>
+
+
+  
+</div>
+
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <td class="file">
+        <table cellpadding="0" cellspacing="0" border="0" class="fileview section">
+          <tr class="title">
+            <th><span class="heading">WindRose.m</span></th>
+          </tr>
+          <tr>
+            <td>
+              
+              <div class="codecontainer"><pre class="matlab-code">function [figure_handle,count,speeds,directions,Table] = WindRose(direction,speed,varargin)
+    %  WindRose  Draw a Wind Rose knowing direction and speed
+    %
+    %  [figure_handle,count,speeds,directions,Table] = WindRose(direction,speed);
+    %  [figure_handle,count,speeds,directions,Table] = WindRose(direction,speed,&#39;parameter1&#39;,value1,...);
+    %
+    %  figure_handle is the handle of the figure containing the chart
+    %  count is the frequency for each speed (ncolumns = nspeeds) and for each direction (nrows = ndirections).
+    %  speeds is a 1 by n vector containing the values for the speed intervals
+    %  directions is a m by 1 vector containing the values in which direction intervals are centered
+    %  Table is a (4+m) by (3+m) cell array (excel-ready), containing Frequencies for each direction and for each speed. 
+    %
+    %  User can specify direction angle meaning North and East winds, so
+    %  the graphs is shown in the desired reference
+    %
+    %     Example
+    %     d = 360 * rand(10000,1); % My reference is North = 0, East = 90.
+    %     v = 30*rand(10000,1);
+    % 
+    %     [figure_handle,count,speeds,directions,Table] = WindRose(d,v,&#39;anglenorth&#39;,0,&#39;angleeast&#39;,90,&#39;freqlabelangle&#39;,45);
+    %
+    % PARAMETER          CLASS         DEFAULT VALUE         DESCRIPTION
+    %------------------------------------------------------------------------------------------------------------------------------------------------------------
+	% &#39;centeredin0&#39;      Logical.      true                  Is first angular bin centered in 0 (-5 to 5)? -&gt; CeteredIn0 = true // or does it start in 0 (0 to 10)? -&gt; CeteredIn0 = false.
+    % &#39;ndirections&#39;      Numeric.      36                    Number of direction bins (subdivisions) to be shown.
+    % &#39;freqround&#39;        Numeric.      1                     Maximum frquency value will be rounded to the first higher whole multiple of FrequenciesRound. Only applies if &#39;maxfrequency&#39; is specified.
+    % &#39;nfreq&#39;            Numeric.      5                     Draw this number of circles indicating frequency.
+    % &#39;speedround&#39;       Numeric.      [] (auto)             Maximum wind speed will be rounded to the first higher whole multiple of WindSpeedRound.
+    % &#39;nspeeds&#39;          Numeric.      [] (auto)             Draw this number of windspeeds subdivisions (bins). Default is 6 if &#39;speedround&#39; is specified. Otherwise, default is automatic.
+    % &#39;maxfrequency&#39;     Numeric.      [] (auto) or 6        Set the value of the maximum frequency circle to be displayed. Be careful, because bins radius keep the original size.
+    % &#39;freqlabelangle&#39;   Numeric.      [] (auto)             Angle in which frequecy labels are shown. If this value is empty, frequency labels will NOT be shown. Trigonometric reference. 0=Right, 90=Up.
+    % &#39;titlestring&#39;      Cell/String.  {&#39;Wind Rose&#39;;&#39; &#39;}     Figure title. It is recommended to include an empty line below the main string.
+    % &#39;lablegend&#39;        String.       &#39;Wind speeds in m/s&#39;  String that will appear at the top of the legend. Can be empty.
+    % &#39;cmap&#39;             String.       &#39;jet&#39;                 String with the name of a colormap function. If you put inv before the name of the funcion, colors will be flipped (e.g. &#39;invjet&#39;, &#39;invautum&#39;, &#39;invbone&#39;, ...). Use any of the built-in functions (autumn, bone, colorcube, cool, copper, flag, gray, hot, hsv, jet, lines, pink, prism, spring, summer, white, winter). See doc colormap for more information.
+    % &#39;height&#39;           Numeric.      2/3*screensize        Figure inner height in pixels. Default is 2/3 of minimum window dimension;
+    % &#39;width&#39;            Numeric.      2/3*screensize        Figure inner width in pixels.
+    % &#39;figcolor&#39;         Color Code.   &#39;w&#39;                   Figure color, any admitted matlab color format. Default is white.
+    % &#39;textcolor&#39;        Color Code.   &#39;k&#39;                   Text and axis color, any admitted matlab color format. Default is black.
+    % &#39;labels&#39;           CellString    {&#39;N&#39;,&#39;S&#39;,&#39;E&#39;,&#39;W&#39;}     Specify North South East West in a cell array of strings.
+    % &#39;labelnorth&#39;       String.       &#39;N&#39;                   Label to indicate North. Be careful if you specify &#39;labels&#39; and &#39;labelnorth&#39;. Last parameter specified will be the one used.
+    % &#39;labelsouth&#39;       String.       &#39;S&#39;                   Label to indicate South. Be careful if you specify &#39;labels&#39; and &#39;labelsouth&#39;. Last parameter specified will be the one used.
+	% &#39;labeleast&#39;        String.       &#39;E&#39;                   Label to indicate East.  Be careful if you specify &#39;labels&#39; and &#39;labeleast&#39; . Last parameter specified will be the one used.
+    % &#39;labelwest&#39;        String.       &#39;W&#39;                   Label to indicate West.  Be careful if you specify &#39;labels&#39; and &#39;labelwest&#39; . Last parameter specified will be the one used.
+    % &#39;titlefontweight&#39;  String.       &#39;bold&#39;                Title font weight. You can use &#39;normal&#39;,&#39;bold&#39;,&#39;light&#39;,&#39;demi&#39;
+    % &#39;legendvariable&#39;   String.       &#39;W_S&#39;                 Variable abbreviation that appears inside the legend. You can use TeX sequences.
+    % &#39;anglenorth&#39;       Numeric.       90                   Direction angle meaning North wind. Default is 90 for North (trigonometric reference). If you specify &#39;north&#39; angle, you need to specify &#39;east&#39; angle, so the script knows how angles are referenced.
+    % &#39;angleeast&#39;        Numeric.       0                    Direction angle meaning East wind.  Default is  0 for East  (counterclockwise).        If you specify &#39;east&#39; angle, you need to specify &#39;north&#39; angle, so the script knows how angles are referenced.
+    % &#39;minradius&#39;        Numeric        1/30                 Minimum radius of the wind rose, relative to the maximum frequency radius. An empty circle of this size appears if greater than 0.
+    % &#39;legendtype&#39;       Numeric        2                    Legend type continuous = 1, separated boxes = 2
+    %
+    %
+    % by Daniel Pereira - dpereira@s2msolutions.com
+    %
+    % 2014/Jul/14 - First version
+    
+    %% Check funciton call
+    if nargin&lt;2
+        error(&#39;WindRose needs at least two inputs&#39;);
+    elseif mod(length(varargin),2)~=0
+        error(&#39;Inputs must be paired: WindRose(Speed,Direction,&#39;&#39;PropertyName&#39;&#39;,PropertyValue,...)&#39;);
+    elseif ~isnumeric(speed) || ~isnumeric(speed)
+        error(&#39;Speed and Direction must be numeric arrays.&#39;);
+    elseif ~isequal(size(speed),size(direction))
+        error(&#39;Speed and Direction must be the same size.&#39;);
+    end
+
+%% Default parameters
+SCS              = get(0,&#39;screensize&#39;);
+
+CeteredIn0       = true;
+ndirections      = 36;
+FrequenciesRound = 1;
+NFrequencies     = 5;
+WindSpeedRound   = [];
+NSpeeds          = [];
+circlemax        = [];
+FreqLabelAngle   = [];
+TitleString      = {&#39;Wind Rose&#39;;&#39; &#39;};
+lablegend        = &#39;Wind Speeds in m/s&#39;;
+colorfun         = &#39;jet&#39;;
+height           = min(SCS(3:4))*2/3;
+width            = min(SCS(3:4))*2/3;
+figcolor         = &#39;w&#39;;
+TextColor        = &#39;k&#39;;
+label.N          = &#39;N&#39;;
+label.S          = &#39;S&#39;;
+label.W          = &#39;W&#39;;
+label.E          = &#39;E&#39;;
+titlefontweight  = &#39;bold&#39;;
+legendvariable   = &#39;W_S&#39;;
+RefN             = 90;
+RefE             = 0;
+min_radius       = 1/30;
+LegendType       = 2;
+
+%% User-.specified parameters
+
+for i=1:2:numel(varargin)
+    switch lower(varargin{i})
+        case &#39;centeredin0&#39;
+            CeteredIn0       = varargin{i+1};
+        case &#39;ndirections&#39;
+            ndirections      = varargin{i+1};
+        case &#39;freqround&#39;
+            FrequenciesRound = varargin{i+1};
+        case &#39;nfreq&#39;
+            NFrequencies     = varargin{i+1}; 
+        case &#39;speedround&#39;
+            WindSpeedRound   = varargin{i+1};
+        case &#39;nspeeds&#39;
+            NSpeeds          = varargin{i+1};
+        case &#39;freqlabelangle&#39;
+            FreqLabelAngle   = varargin{i+1};
+        case &#39;titlestring&#39;
+            TitleString      = varargin{i+1};
+        case &#39;lablegend&#39;
+            lablegend        = varargin{i+1};
+        case &#39;cmap&#39;
+            colorfun         = varargin{i+1};
+        case &#39;height&#39;
+            height           = varargin{i+1};
+        case &#39;width&#39;
+            width            = varargin{i+1};
+        case &#39;figcolor&#39;
+            figcolor         = varargin{i+1};
+        case &#39;textcolor&#39;
+            TextColor        = varargin{i+1};
+        case &#39;min_radius&#39;
+            min_radius       = varargin{i+1};
+        case &#39;maxfrequency&#39;
+            circlemax = varargin{i+1};
+        case &#39;titlefontweight&#39;
+            titlefontweight  = varargin{i+1};
+        case &#39;legendvariable&#39;
+            legendvariable   = varargin{i+1};
+        case &#39;legendtype&#39;
+            LegendType       = varargin{i+1};
+        case &#39;labelnorth&#39;
+            label.N          = varargin{i+1};
+        case &#39;labelsouth&#39;
+            label.S          = varargin{i+1};
+        case &#39;labeleast&#39;
+            label.E          = varargin{i+1};
+        case &#39;labelwest&#39;
+            label.W          = varargin{i+1};
+        case &#39;labels&#39;
+            label.N          = varargin{i+1}{1};
+            label.S          = varargin{i+1}{2};
+            label.E          = varargin{i+1}{3};
+            label.W          = varargin{i+1}{4};
+        case &#39;anglenorth&#39;
+            k = any(arrayfun(@(x) strcmpi(x,&#39;angleeast&#39;),varargin));
+            if ~k
+                error(&#39;Reference angles need to be specified for AngleEAST and AngleNORTH directions&#39;);
+            end
+        case &#39;angleeast&#39;
+            k = find(arrayfun(@(x) strcmpi(x,&#39;anglenorth&#39;),varargin));
+            if isempty(k)
+                error(&#39;Reference angles need to be specified for AngleEAST and AngleNORTH directions&#39;);
+            else
+                RefE         = varargin{i+1};
+                RefN         = varargin{k+1};
+            end
+            if abs(RefN-RefE)~=90
+                error(&#39;The angles specified for north and east must differ in 90 degrees&#39;);
+            end
+        otherwise
+            error([varargin{i} &#39; is not a valid property for WindRose function.&#39;]);
+    end
+end
+
+speed            = reshape(speed,[],1);                                    % Convert wind speed into a column vector
+direction        = reshape(direction,[],1);                                % Convert wind direction into a column vector
+NumberElements   = numel(direction);                                       % Coun the actual number of elements, to consider winds = 0 when calculating frequency.
+dir              = mod((RefN-direction)/(RefN-RefE)*90,360);               % Ensure that the direction is between 0 and 360
+speed            = speed(speed&gt;0);                                         % Only show winds higher than 0. Why? See next comment.
+dir              = dir(speed&gt;0);                                           % Wind = 0 does not have direction, so it cannot appear in a wind rose, but the number of appeareances must be considered.
+
+figure_handle = figure(&#39;color&#39;,figcolor,&#39;units&#39;,&#39;pixels&#39;,&#39;position&#39;,[SCS(3)/2-width/2 SCS(4)/2-height/2 width height],&#39;menubar&#39;,&#39;none&#39;,&#39;toolbar&#39;,&#39;none&#39;);
+%% Bin Directions
+N     = linspace(0,360,ndirections+1);                                     % Create ndirections direction intervals (ndirections+1 edges)
+N     = N(1:end-1);                                                        % N is the angles in which direction bins are centered. We do not want the 360 to appear, because 0 is already appearing.
+n     = 180/ndirections;                                                   % Angle that should be put backward and forward to create the angular bin, 1st centered in 0
+if ~CeteredIn0                                                             % If user does not want the 1st bin to be centered in 0
+    N = N+n;                                                               % Bin goes from 0 to 2n (N to N+2n), instead of from -n to n (N-n to N+n), so Bin is not centered in 0 (N) angle, but in the n (N+n) angle
+end
+
+%% Wind speeds/velocities
+if ~isempty(WindSpeedRound)
+    if isempty(NSpeeds); NSpeeds = 6; end                                  % Default value for NSpeeds if not user specified
+    vmax      = ceil(max(speed)/WindSpeedRound)*WindSpeedRound;            % Max wind speed rounded to the nearest whole multiple of WindSpeedRound (Use round or ceil as desired)
+                if vmax==0; vmax=WindSpeedRound; end;                      % If max wind speed is 0, make max wind to be WindSpeedRound, so wind speed bins are correctly shown.
+    vwinds    = linspace(0,vmax,NSpeeds);                                  % Wind speeds go from 0 to vmax, creating the desired number of wind speed intervals
+else
+    figure2 = figure(&#39;visible&#39;,&#39;off&#39;); plot(speed);                        % Plot wind speed
+    vwinds = get(gca,&#39;ytick&#39;); delete(figure2);                            % Yaxis will automatically make divisions or us.
+    if ~isempty(NSpeeds)
+        vwinds = linspace(min(vwinds),max(vwinds),NSpeeds);
+    end
+end
+
+%% Histogram in each direction + Draw
+count     = PivotTableCount(N,n,vwinds,speed,dir,NumberElements);          % For each direction and for each speed, value of the radius that the windorose must reach (Accumulated in speed).
+
+if isempty(circlemax)
+    circlemax = ceil(max(max(count))/FrequenciesRound)*FrequenciesRound;   % Round highest frequency to closest whole multiple of theFrequenciesRound  (Use round or ceil as desired)
+end
+min_radius = min_radius*circlemax;
+
+DrawPatches(N,n,vwinds,count,colorfun,figcolor,min_radius);% Draw the windrose, knowing the angles, the range for each direction, the speed ranges, the count (frequency) values and the colormap used.
+
+%% Constant frequecy circles and x-y axes + Draw + Labels
+
+[x,y]     = cylinder(1,50); x = x(1,:); y = y(1,:);                        % Get x and y for a unit-radius circle
+circles   = linspace(0,circlemax,NFrequencies+1); circles = circles(2:end);% Radii of the circles that must be drawn (frequencies). We do not want to spend time drawing radius=0.
+
+radius    = circles   + min_radius;
+radiusmax = circlemax + min_radius;
+
+plot(x&#39;*radius,y&#39;*radius,&#39;:&#39;,&#39;color&#39;,TextColor);                           % Draw circles
+plot(x*radiusmax,y*radiusmax,&#39;-&#39;,&#39;color&#39;,TextColor);                       % Redraw last circle
+
+axisangles = 0:30:360; axisangles = axisangles(1:end-1);                   % Angles in which to draw the radial axis (trigonometric reference)
+R = [min_radius;radiusmax];
+plot(R*cosd(axisangles),R*sind(axisangles),&#39;:&#39;,&#39;color&#39;,TextColor);         % Draw radial axis, in the specified angles
+
+FrequecyLabels(circles,radius,FreqLabelAngle,TextColor);                   % Display frequency labels
+CardinalLabels(radiusmax,TextColor,label);                                 % Display N, S, E, W
+
+%% Title and Legend
+title(TitleString,&#39;color&#39;,TextColor,&#39;fontweight&#39;,titlefontweight);         % Display a title
+set(gca,&#39;outerposition&#39;,[0 0 1 1]);                                        % Check that the current axis fills the figure.
+if LegendType==2
+    leyenda = CreateLegend(vwinds,lablegend,legendvariable);               % Create a legend cell string
+    l       = legend(leyenda,&#39;location&#39;,&#39;southwest&#39;);                      % Display the legend wherever (position is corrected)
+              PrettyLegend(l,TextColor);                                   % Display the legend in a good position
+elseif LegendType==1
+    disp(vwinds);
+    caxis([vwinds(1) vwinds(end)]);
+    colorbar(&#39;YTick&#39;,vwinds);
+end
+          
+%% Outputs
+[count,speeds,directions,Table] = CreateOutputs(count,vwinds,N,n,RefN,RefE);
+
+function count = PivotTableCount(N,n,vwinds,speed,dir,NumberElements)
+    count  = zeros(length(N),length(vwinds));
+    for i=1:length(N)
+        d1 = mod(N(i)-n,360);                                              % Direction 1 is N-n
+        d2 = N(i)+n;                                                       % Direction 2 is N+n
+        if d1&gt;d2                                                           % If direction 1 is greater than direction 2 of the bin (d1 = -5 = 355, d2 = 5)
+            cond = or(dir&gt;=d1,dir&lt;d2);                                     % The condition is satisfied whenever d&gt;=d1 or d&lt;d2
+        else                                                               % For the rest of the cases,
+            cond = and(dir&gt;=d1,dir&lt;d2);                                    % Both conditions must be met for the same bin
+        end
+        counter    = histc(speed(cond),vwinds);                            % If vmax was for instance 25, counter will have counts for these intervals: [&gt;=0 y &lt;5] [&gt;=5 y &lt;10] [&gt;=10 y &lt;15] [&gt;=15 y &lt;20] [&gt;=20 y &lt;25] [&gt;=25]
+        if isempty(counter); counter = zeros(1,size(count,2)); end         % If counter is empty for any reason, set the counts to 0.
+        count(i,:) = cumsum(counter);                                      % Computing cumsum will make count to have the counts for [&lt;5] [&lt;10] [&lt;15] [&lt;20] [&lt;25] [&gt;=25] (cumulative count, so we have the radius for each speed)
+    end
+    count = count/NumberElements*100;                                      % Frequency in percentage
+
+function DrawPatches(N,n,vwinds,count,colorfun,figcolor,min_radius)
+    inv = strcmp(colorfun(1:3),&#39;inv&#39;);                                     % INV = First three letters in cmap are inv
+    if inv; colorfun = colorfun(4:end); end                                % if INV, cmap is the rest, excluding inv
+    color = feval(colorfun,256);                                           % Create color map
+    color = interp1(linspace(1,length(vwinds),256),color,1:length(vwinds));% Get the needed values.
+    if inv; color = flipud(color); end;                                    % if INV, flip upside down the colormap
+    plot(0,0,&#39;.&#39;,&#39;color&#39;,figcolor,&#39;markeredgecolor&#39;,figcolor,&#39;markerfacecolor&#39;,figcolor); % This will create an empty legend entry.
+    hold on; axis square; axis off;
+    for i=1:length(N)
+        for j=length(vwinds):-1:1
+            if j&gt;1
+                r(1) = count(i,j-1);
+            else
+                r(1) = 0;                                                  % For the first case, radius is 0
+            end
+            r(2)  = count(i,j);
+            r     = r+min_radius;
+            
+            alpha = linspace(-n,n,100)+N(i);
+            x1    = r(1) * sind(fliplr(alpha));
+            y1    = r(1) * cosd(fliplr(alpha));
+            x     = [x1 r(2)*sind(alpha)];                           % Create circular sectors
+            y     = [y1 r(2)*cosd(alpha)];
+            fill(x,y,color(j,:),&#39;edgecolor&#39;,hsv2rgb(rgb2hsv(color(j,:)).*[1 1 0.7])); % Draw them in the specified coloe. Edge is slightly darker.
+        end
+    end
+
+function FrequecyLabels(circles,radius,angulo,TextColor)
+    s = sind(angulo); c = cosd(angulo);                                      % Get the positions in which labels must be placed
+    if c&gt;0; ha = &#39;left&#39;;   elseif c&lt;0; ha = &#39;right&#39;; else ha = &#39;center&#39;; end % Depending on the sign of the cosine, horizontal alignment should be one or another
+    if s&gt;0; va = &#39;bottom&#39;; elseif s&lt;0; va = &#39;top&#39;;   else va = &#39;middle&#39;; end % Depending on the sign of the sine  , vertical   alignment should be one or another
+    for i=1:length(circles)
+        text(radius(i)*c,radius(i)*s,[num2str(circles(i)) &#39;%&#39;],&#39;HorizontalAlignment&#39;,ha,&#39;verticalalignment&#39;,va,&#39;color&#39;,TextColor); % display the labels for each circle
+    end
+    rmin = radius(1)-abs(diff(radius(1:2)));
+    if rmin&gt;0
+        if c&gt;0; ha = &#39;right&#39;; elseif c&lt;0; ha = &#39;left&#39;;   else ha = &#39;center&#39;; end % Depending on the sign of the cosine, horizontal alignment should be one or another
+        if s&gt;0; va = &#39;top&#39;;   elseif s&lt;0; va = &#39;bottom&#39;; else va = &#39;middle&#39;; end % Depending on the sign of the sine  , vertical   alignment should be one or another
+        text(rmin*c,rmin*s,&#39;0%&#39;,&#39;HorizontalAlignment&#39;,ha,&#39;verticalalignment&#39;,va,&#39;color&#39;,TextColor); % display the labels for each circle
+    end
+    
+function CardinalLabels(circlemax,TextColor,labels)
+    text( circlemax,0,[&#39; &#39; labels.E],&#39;HorizontalAlignment&#39;,&#39;left&#39;  ,&#39;verticalalignment&#39;,&#39;middle&#39;,&#39;color&#39;,TextColor); % East  label
+    text(-circlemax,0,[labels.W &#39; &#39;],&#39;HorizontalAlignment&#39;,&#39;right&#39; ,&#39;verticalalignment&#39;,&#39;middle&#39;,&#39;color&#39;,TextColor); % West  label
+    text(0, circlemax,labels.N      ,&#39;HorizontalAlignment&#39;,&#39;center&#39;,&#39;verticalalignment&#39;,&#39;bottom&#39;,&#39;color&#39;,TextColor); % North label
+    text(0,-circlemax,labels.S      ,&#39;HorizontalAlignment&#39;,&#39;center&#39;,&#39;verticalalignment&#39;,&#39;top&#39;   ,&#39;color&#39;,TextColor); % South label
+    xlim([-circlemax circlemax]);
+    ylim([-circlemax circlemax]);
+    
+function leyenda = CreateLegend(vwinds,lablegend,legendvariable)
+    leyenda = cell(length(vwinds),1);                                      % Initialize legend cell array
+    for j=1:length(vwinds)
+        if j==length(vwinds)                                               % When last index is reached
+            string = sprintf(&#39;%s %s %g&#39;,legendvariable,&#39;\geq&#39;,vwinds(j));  % Display wind &lt;= max wind
+        else                                                               % For the rest of the indices
+            string = sprintf(&#39;%g %s %s &lt; %g&#39;,vwinds(j),&#39;\leq&#39;,legendvariable,vwinds(j+1)); % Set v1 &lt;= v2 &lt; v1
+        end
+        string = regexprep(string,&#39;0 \leq&#39;,&#39;0 &lt;&#39;);                         % Replace &quot;0 &lt;=&quot; by &quot;0 &lt;&quot;, because wind speed = 0 is not displayed in the graph.
+        leyenda{length(vwinds)-j+1} = string;
+    end
+    leyenda = [lablegend; leyenda];                                        % Add the title for the legend
+    
+function PrettyLegend(l,TextColor)
+    set(l,&#39;units&#39;,&#39;normalized&#39;,&#39;box&#39;,&#39;off&#39;);                               % Do not display the box
+    POS = get(l,&#39;position&#39;);                                               % get legend position (width and height)
+    set(l,&#39;position&#39;,[0 1-POS(4) POS(3) POS(4)],&#39;textcolor&#39;,TextColor);    % Put the legend in the upper left corner
+    uistack(l,&#39;bottom&#39;);                                                   % Put the legend below the axis
+    
+function [count,speeds,directions,Table] = CreateOutputs(count,vwinds,N,n,RefN,RefE)
+    count          = [count(:,1) diff(count,1,2)];                         % Count had the accumulated frequencies. With this line, we get the frequency for each single direction and each single speed with no accumulation.
+    speeds         = vwinds;                                               % Speeds are the same as the ones used in the Wind Rose Graph
+    directions     = mod(RefN - N&#39;/90*(RefN-RefE),360);                    % Directions are the directions in which the sector is centered. Convert function reference to user reference
+    vwinds(end+1)  = inf;                                                  % Last wind direction is inf (for creating intervals)
+    
+    [directions,i] = sort(directions);                                     % Sort directions in ascending order
+    count          = count(i,:);                                           % Sort count in the same way.
+    
+    wspeeds        = cell(1,length(vwinds)-1);
+    for i=1:(length(vwinds)-1)
+        if vwinds(i) == 0; s1 = &#39;(&#39;; else s1 = &#39;[&#39;; end                     % If vwinds(i) =0 interval is open, because count didn&#39;t compute windspeed = 0.
+        wspeeds{i} = [s1 num2str(vwinds(i)) &#39; , &#39; num2str(vwinds(i+1)) &#39;)&#39;];% Create wind speed intervals
+    end
+    
+    wdirs = cell(length(directions),1);
+    for i=1:length(directions)
+        wdirs{i} = sprintf(&#39;[%g , %g)&#39;,mod(directions(i)-n,360),directions(i)+n); % Create widn direction intervals
+    end
+    
+    WindZeroFreqency = 100-sum(sum(count));                                % Wind speed = 0 appears 100-sum(total) % of the time. It does not have direction.
+    WindZeroFreqency = WindZeroFreqency*(WindZeroFreqency/100&gt;eps);        % If frequency/100% is lower than eps, do not show that value.
+
+    Table            = [{&#39;Frequencies (%)&#39;},{&#39;&#39;},{&#39;Wind Speed Interval&#39;},repmat({&#39;&#39;},1,numel(wspeeds));&#39;Direction Interval ()&#39;,&#39;Direction ~&#39;,wspeeds,&#39;TOTAL&#39;;[wdirs num2cell(directions) num2cell(count) num2cell(sum(count,2))]]; % Create table cell. Ready to xlswrite.
+    Table(end+1,:)   = [{&#39;[0 , 360)&#39;,&#39;TOTAL&#39;},num2cell(sum(count,1)),{sum(sum(count))}];
+    Table(end+1,1:2) = {&#39;No Direction&#39;, &#39;Wind Speed = 0&#39;};  % Show Wind Speed = 0 on table.
+    Table{end,end}   = WindZeroFreqency;</pre></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  <script src="/matlabcentral/fileexchange/assets/file_infos/show.js" type="text/javascript"></script>
+
+<p id="contactus"><a href="/company/feedback/">Contact us</a></p>
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+function p2l(pathname,query,hash){
+pathname = pathname.replace(/\//gi,"__")
+if(pathname === "__") {
+pathname = "homepage";
+}
+pathname = pathname.replace(/\./gi,"_");
+query = query.replace(/\?/gi,'-');
+params = query.split('&');
+args = []
+for(arg = 0; arg < params.length; arg++){
+args.push(params[arg].split('=')[0]);
+}
+pathname += args.join('-');
+pathname += hash.replace(/#/gi,"-");
+return pathname;
+};
+_qevents.push({
+qacct:"p-zfNtLVVEHXE-1",
+labels: "_fp.event." + p2l(document.location.pathname,
+document.location.search, document.location.hash)
+});
+</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-zfNtLVVEHXE-1.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- BEGIN Google Code for UK and .COM Domains-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1023777138;
+var google_conversion_label = "SVIBCMq3xwIQ8rKW6AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1023777138/?value=0&label=SVIBCMq3xwIQ8rKW6AM&guid=ON&script=0"/>
+</div>
+</noscript>
+<!-- END Google Code for UK and .COM Domains-->
+
+      
+
+	
+      
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+</div>
+<!-- footer.html -->
+<!-- START OF FOOTER -->
+
+<div id="mlc-footer">
+  <script type="text/javascript">
+function clickDynamic(obj, target_url, tracking_code) {
+	var pos=target_url.indexOf("?");
+	if (pos<=0) { 
+		var linkComponents = target_url + tracking_code;
+		obj.href=linkComponents;
+	} 
+}
+</script>
+  <div class="wrapper">
+    <div>
+      <ul id="matlabcentral">
+        <li class="copyright first">&copy; 1994-2015 The MathWorks, Inc.</li>
+        <li class="first"><a href="/help.html" title="Site Help">Site Help</a></li>
+        <li><a href="/company/aboutus/policies_statements/patents.html" title="patents" rel="nofollow">Patents</a></li>
+        <li><a href="/company/aboutus/policies_statements/trademarks.html" title="trademarks" rel="nofollow">Trademarks</a></li>
+        <li><a href="/company/aboutus/policies_statements/" title="privacy policy" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="/company/aboutus/policies_statements/piracy.html" title="preventing piracy" rel="nofollow">Preventing Piracy</a></li>
+        <li class="last"><a href="/matlabcentral/termsofuse.html" title="Terms of Use" rel="nofollow">Terms of Use</a></li>
+        <li class="icon"><a href="/company/rss/" title="RSS" class="rssfeed" rel="nofollow"><span class="text">RSS</span></a></li>
+        <li class="icon"><a href="/programs/bounce_hub_generic.html?s_tid=mlc_lkd&url=http://www.linkedin.com/company/the-mathworks_2" title="LinkedIn" class="linkedin" rel="nofollow" target="_blank"></a></li>
+        <li class="icon"><a href="/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=https://plus.google.com/117177960465154322866?prsrc=3" title="Google+" class="google" rel="nofollow" target="_blank"><span class="text">Google+</span></a></li>
+        <li class="icon"><a href="/programs/bounce_hub_generic.html?s_tid=mlc_fbk&url=http://www.facebook.com/MATLAB" title="Facebook" class="facebook" rel="nofollow" target="_blank"><span class="text">Facebook</span></a></li>
+        		<li class="last icon"><a href="/programs/bounce_hub_generic.html?s_tid=mlc_twt&url=http://www.twitter.com/MATLAB" title="Twitter" class="twitter" rel="nofollow" target="_blank"><span class="text">Twitter</span></a></li>        
+        
+      </ul>
+      <ul id="mathworks">
+        <li class="first sectionhead">Featured MathWorks.com Topics:</li>
+        <li class="first"><a href="/products/new_products/latest_features.html" onclick="clickDynamic(this, this.href, '?s_cid=MLC_new')">New Products</a></li>
+        <li><a href="/support/" title="support" onclick="clickDynamic(this, this.href, '?s_cid=MLC_support')">Support</a></li>
+        <li><a href="/help" title="documentation" onclick="clickDynamic(this, this.href, '?s_cid=MLC_doc')">Documentation</a></li>
+        <li><a href="/services/training/" title="training" onclick="clickDynamic(this, this.href, '?s_cid=MLC_training')">Training</a></li>
+        <li><a href="/company/events/webinars/" title="Webinars" onclick="clickDynamic(this, this.href, '?s_cid=MLC_webinars')">Webinars</a></li>
+        <li><a href="/company/newsletters/" title="newsletters" onclick="clickDynamic(this, this.href, '?s_cid=MLC_newsletters')">Newsletters</a></li>
+        <li><a href="/programs/trials/trial_request.html?prodcode=ML&s_cid=MLC_trials" title="MATLAB Trials">MATLAB Trials</a></li>
+        
+        		<li class="last"><a href="/company/jobs/opportunities/index_en_US.html" title="Careers" onclick="clickDynamic(this, this.href, '?s_cid=MLC_careers')">Careers</a></li>
+                 
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- END OF FOOTER -->
+
+
+      
+      
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="/scripts/omniture/s_code.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+if (typeof mboxLoadSCPlugin == 'function') {
+	mboxLoadSCPlugin(s); 
+}
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.4. -->
+
+
+  
+
+     
+<!-- BEGIN Qualaroo --> 
+<script type="text/javascript">
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+			s.async = true; s.src = '//s3.amazonaws.com/ki.js/49559/ahy.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+<!-- END Qualaroo --> 
+
+    </body>
+</html>
