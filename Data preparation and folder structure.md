@@ -44,16 +44,16 @@
 
 - For the naming of the picture, take ‘crop_xi_yj.png’ as an example. This naming is not essential. This is automatically generated when traversing the selected area. You can change it to any name according to your needs.
 
-# The data structure
+# The Data Structure
 
-├── Index Number of the Patient
-│ ├── Categories (e.g., tumor, necrosis, fiber, normal)
-│ │ ├── Annotation
-│ │ │ ├── subimages
-│ │ │ │ ├── crop_xi_yj.png
-│ │ │ │ ├── ... (other images)
-│ │ │ ├── skeletons
-│ │ │ └── overlays
-│ │ ├── ... (other Annotations)
-│ ├── ... (other Categories)
-└── ... (other First-Level Folders with the index number of the patient)
+- **Index Number of the Patient**
+  - **Categories (e.g., tumor, necrosis, fiber, normal)**
+    - **Annotation**
+      - **subimages**
+        - `crop_xi_yj.png`
+        - `... (other images)`
+      - **skeletons**
+      - **overlays**
+    - `... (other Annotations)`
+  - `... (other Categories)`
+- `... (other First-Level Folders with the index number of the patient)`
