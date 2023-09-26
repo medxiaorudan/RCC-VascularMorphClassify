@@ -17,7 +17,7 @@
 
 # About Names of Folders and Files
 
-## 1) First-Level Folder
+## 1. First-Level Folder
 
 - The first folder is named with numbers. The original whole slide image's name is too long and irregular, so I replaced the original film name with its four index values. The other numbers in the file represent the number of sub_images.
 - Explanation of the original whole slide images name: Take `HP19.10064.A6.ccRCC.scn` as an example:
@@ -28,11 +28,11 @@
   - `scn` is the file type suffix.
   - Therefore, `HP19.10064.A6.ccRCC.scn` and `HP19.10064.A7.ccRCC.scn` are different histopathological slices belonging to the same patient.
 
-## 2) Second-Level Folder
+## 2. Second-Level Folder
 
 - The second-level folder names represent four categories: tumor and non-tumor (necrosis, fiber, normal). However, not all WSIs contain these four categories, and some include only one or a few.
 
-## 3) Third-Level File
+## 3. Third-Level File
 
 - The third layer file named `Annotation` represents the selected area. The number of `Annotation` represents the number of selected ROI areas.
 
