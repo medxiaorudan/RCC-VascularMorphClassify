@@ -1,4 +1,4 @@
-function OutBW = Condition1( BW , debug )
+function OutBW = Condition2( BW , debug )
 
 MaskBW = zeros(size(BW)+2) ;
 MaskBW([2:end-1],[2:end-1]) = BW ;
@@ -6,15 +6,12 @@ BW = MaskBW ;
 BW = double( BW ) ;
 OutBW = BW ;
 [row col] = find( BW == 1 ) ;
-
-
 for i = 1 : length(row)
         indx = row(i) ;
         indy = col(i) ;
         if debug == 1
-            if indx == 189 && indy == 28            
-                close all ;
-                imshow(BW) ;
+            imshow(BW) ;
+            if indx == 27 && indy == 188
                 hold on ;
                 plot(indy,indx,'r*') ;
             end
@@ -52,12 +49,12 @@ for i = 1 : length(row)
             NCondition2 = min(N1,N2) ;
             
             
-%% Condition 3
+%% Condition New3
             Mask = logical(Mask) ;
-            Mask(3,3) = ~Mask(3,3) ;
+            Mask(1,1) = ~Mask(1,1) ;
             
-            NCondition3 = ( Mask(1,3) | Mask(1,2) | Mask(3,3) ) & Mask(2,3) ;
-            
+            NCondition3 = ( Mask(3,1) | Mask(3,2) | Mask(1,1) ) & Mask(2,1);
+
 %% Judgement
              if NCondition3 == 0 && NCondition2>=2 && NCondition2<=3 && b == 1
                  OutBW(indx,indy) = 0 ;
