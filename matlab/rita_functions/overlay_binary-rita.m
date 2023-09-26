@@ -3,7 +3,7 @@ function ov = overlay_binary(img, binary, edge)
     
     if ndims(img) == 2
         if edge
-            binimg = (binary - imerode(binary,ones(5,5))) > 0;
+            binimg = (binary - imerode(binary,ones(3,3))) > 0;
         else
             binimg = binary;
         end
@@ -14,7 +14,7 @@ function ov = overlay_binary(img, binary, edge)
         ov(:,:,3) = img_temp;
     else
         if edge
-            binimg = (binary - imerode(binary,ones(5,5,5))) > 0;
+            binimg = (binary - imerode(binary,ones(3,3,3))) > 0;
         else
             binimg = binary;
         end
