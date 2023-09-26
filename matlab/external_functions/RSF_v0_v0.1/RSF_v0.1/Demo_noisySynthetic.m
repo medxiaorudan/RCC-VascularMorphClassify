@@ -21,51 +21,38 @@
 
 close all;
 clear all;
+iterNum = 200;   % the number of iterations depend on the location of the initial contour.
+                 % 
 
-imgID=3;   % choose one of the four images by setting imgID to 1, 2, 3, or 4.           
-c0 = 2;
-if imgID ==1
-    iterNum=120;
-    lambda1 = 1.0;  lambda2 = 1.0; nu = 0.001*255*255;
-    load Vessel2_initialLSF2.mat;   % load image and initial contour
-    u=c0*sign(initialLSF);
-elseif imgID == 2
-    iterNum=200;
-    lambda1 = 1.0;  lambda2 = 1.0; nu = 0.001*255*255;
-    load Vessel3_initialLSF;  % load image and initial contour
-    u=c0*sign(initialLSF);
-elseif imgID == 3
-    iterNum =200;
-    lambda1 = 1.0;  lambda2 = 2.0; nu = 0.003*255*255;
-    load  mybrainC100b_initialLSF.mat; % load image and initial contour
-    u=initialLSF;
-elseif imgID==4
-    iterNum=50;
-    lambda1 = 1.0;  lambda2 = 1.0; nu = 0.001*255*255;
-    load nonhomo_initialLSF.mat; % load image and initial contour
-    u=c0*sign(initialLSF);
-end
-
+Img=imread('noisyNonUniform.bmp');
 Img=double(Img(:,:,1));
-figure;imagesc(Img, [0, 255]);colormap(gray);hold on; axis off;
-[nrow, ncol]=size(Img);
-contour(u,[0 0],'r');
-title('Initial LSF')
-pause(.05);
 
+
+lambda1 = 1.0;
+lambda2 = 1.0;
+nu = 0.001*255*255;  %
+
+figure;imagesc(Img, [0, 255]);colormap(gray);hold on; axis off;
+text(6,6,'Left click to get points, right click to get end point','FontSize',[12],'Color', 'r');
+BW=roipoly;
+c0=2;
+initialLSF=c0*2*(0.5-BW);
+u=initialLSF;
+hold on;
+[c,h] = contour(u,[0 0],'r');
 
 pause(0.1);
-timestep = .1;
+timestep = 0.1;
 mu = 1;
 
 epsilon = 1.0;
-sigma=3.0;    % scale parameter in Gaussian kernel
+sigma=2.0;    % scale parameter in Gaussian kernel
 K=fspecial('gaussian',round(2*sigma)*2+1,sigma); % Gaussian kernel
-KI=conv2(Img,K,'same');
-KONE=conv2(ones(nrow, ncol),K,'same');
+Img;
+KI=conv2(Img,K,'same');  
+KONE=conv2(ones(size(Img)),K,'same');
 % start level set evolution
 time = cputime;
-penalizeType=0;
 for n=1:iterNum
     method='ChunmingLi2005'; % this parameter specifies the method published in CVPR07 (developed in 2006).
     DiracFunction='global'; % this parameter specifies the Dirac function that is defined by the
@@ -75,19 +62,17 @@ for n=1:iterNum
     u=LSE(u,Img,K,KI,KONE, nu,timestep,mu,lambda1,lambda2,epsilon,Iter,1,DiracFunction,method,2004);
     % The input '2004' represents the internal energy term used in my CVPR'05 and 07 papers (developed in 2004).
     % Do NOT change this parameter for this version.
-    if mod(n,10)==0
+    if mod(n,5)==0
         pause(0.001);
         imagesc(Img, [0, 255]);colormap(gray);hold on; axis off;
         contour(u,[0 0],'r');
-        iterNum=[num2str(n*Iter), ' iterations'];
+        iterNum=[num2str(n), ' iterations'];
         title(iterNum);
         hold off;
-    end
+    end   
 end
 totaltime = cputime - time
 imagesc(Img, [0, 255]);colormap(gray);hold on; axis off;
 contour(u,[0 0],'r');
 iterNum=[num2str(n), ' iterations'];
 title(iterNum);
-
-
