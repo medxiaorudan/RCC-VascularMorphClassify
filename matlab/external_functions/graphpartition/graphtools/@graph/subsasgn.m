@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function a = subsasgn(a,index,val)
+% subsasgn -- defines index assignment for graph objects
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,15 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
-
-% identify class
-g = class(g,'graph');
+switch index.type
+ case '.'
+   switch index.subs
+   case 'vertices'
+    a.vertices = val;
+   case 'edges'
+    a.edges = val;
+   otherwise
+    error('Invalid field name')
+  end
+end      
+  

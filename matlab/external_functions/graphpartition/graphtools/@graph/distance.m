@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function dg=distance(g)
+% dg=distance(g) -- creates a graph with edge weights equal to the node distances
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,16 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+dg.vertices=g.vertices;
+[n1,n2]=find(g.edges);
+
+% adds eps to avoid zero-distances (no edge)
+d=sqrt(sum((g.vertices(n1,:)-g.vertices(n2,:)).^2,2))+eps;
+
+dg.edges=sparse(n1,n2,d,size(g.edges,1),size(g.edges,2));
 
 % identify class
-g = class(g,'graph');
+dg = class(dg,'graph');
+
+
+

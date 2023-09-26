@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function g=minus(g1,g2)
+% g=minus(g1,g2) -- subtracts edge values of two graphs (with the same vertices)
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,16 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
+if any(size(g1.vertices) ~= size(g2.vertices))
+  error('cannot add graphs of different sizes')
+end
+
+if any(any(g1.vertices ~= g2.vertices))
+  error('cannot add graphs with different vertices')
+end
+
 g.vertices=g1.vertices;
-g.edges=g1.edges';
+g.edges=g1.edges-g2.edges;
 
 % identify class
 g = class(g,'graph');

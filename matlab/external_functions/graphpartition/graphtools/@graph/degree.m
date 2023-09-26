@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function d=degree(g)
+% d=degree(g) -- returns a vector with node degrees
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,5 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+d=sum(g.edges,1);
 
-% identify class
-g = class(g,'graph');

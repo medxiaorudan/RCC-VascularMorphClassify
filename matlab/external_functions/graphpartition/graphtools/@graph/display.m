@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function display(g)
+% display(g) -- displays a graph object
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,17 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+disp([inputname(1),'.vertices = '])
+disp(g.vertices)
+disp([inputname(1),'.edges    = '])
+%disp(g.edges)
 
-% identify class
-g = class(g,'graph');
+[i,j,e]=find(g.edges);
+
+for k=1:length(i)
+fprintf('    (');
+fprintf('%7.4g ',g.vertices(i(k),:));
+fprintf(',');
+fprintf('%7.4g ',g.vertices(j(k),:));
+fprintf(')\t= %g\n',e(k));
+end

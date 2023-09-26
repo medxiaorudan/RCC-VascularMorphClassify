@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function setEdgesSelf(g,value)
+% setEdgesSelf(g,value)  - set all edges from a node to itself equal to a given value
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,9 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+k=sub2ind(size(g.edges),1:size(g.edges,1),1:size(g.edges,1));
+g.edges(k)=value;
 
-% identify class
-g = class(g,'graph');
+assignin('caller',inputname(1),g);  % update structure in caller's space
+
+

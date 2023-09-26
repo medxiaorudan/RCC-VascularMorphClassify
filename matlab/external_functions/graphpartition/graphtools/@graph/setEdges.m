@@ -1,5 +1,6 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function setEdges(g,i,j,values)
+% setEdges(g,i,j,values) - set edges specified by i and j equal to values
+%                          (as in the sparse command)
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +26,9 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+k=sub2ind(size(g.edges),i,j);
+g.edges(k)=values;
 
-% identify class
-g = class(g,'graph');
+assignin('caller',inputname(1),g);  % update structure in caller's space
+
+

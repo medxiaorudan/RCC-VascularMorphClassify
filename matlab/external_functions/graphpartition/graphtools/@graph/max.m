@@ -1,5 +1,5 @@
-function g=ctranspose(g1)
-% g=ctranspose(g1) -- creates graph with transposed edge matrix
+function [mx,i]=max(g,dim)
+% mx=max(g,dim) -- returns the maximum (nonzero) edge along dimension dim
 %
 % Copyright (C) 2004  Joao Hespanha
 
@@ -25,8 +25,10 @@ function g=ctranspose(g1)
 % Auguest 27, 2006
 % GNU GPL added
 
-g.vertices=g1.vertices;
-g.edges=g1.edges';
+edges=g.edges;
 
-% identify class
-g = class(g,'graph');
+k=find(edges);
+offset=-min(edges(k))+1;
+edges(k)=edges(k)+offset; % offset so that minimum for nonzeros is at least +1
+[mx,i]=max(edges,[],dim);
+mx=mx-offset;             % remove offset
