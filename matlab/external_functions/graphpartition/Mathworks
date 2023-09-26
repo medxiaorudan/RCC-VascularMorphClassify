@@ -1,0 +1,59 @@
+http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do
+
+Graph Partitioning
+
+graph,partition,clustering
+
+An Efficient MATLAB Algorithm for Graph Partitioning
+
+
+
+This script implements a graph partitioning algorithm based on
+spectral factorization. This algorithm is described in the following
+technical report:
+
+João Hespanha. An efficient MATLAB Algorithm for Graph
+Partitioning. Technical Report, University of California,
+Oct. 2004. Available at
+http://www.ece.ucsb.edu/~hespanha/techreps.html
+
+The script is used as follows:
+
+% function [ndx,Pi,cost]= grPartition(C,k,nrep);
+%
+% Partitions the n-node undirected graph G defined by the matrix C
+% 
+% Inputs:
+% C - n by n edge-weights matrix. In particular, c(i,j)=c(j,i) is equal 
+%     to the cost associated with cuting the edge between nodes i and j.
+%     This matrix should be symmetric and doubly stochastic. If this
+%     is not the case, this matrix will be normalized to
+%     satisfy these properties (with a warning).
+% k - desired number of partitions
+% nrep - number of repetion for the clustering algorithm 
+%       (optional input, defaults to 1)
+% 
+% Outputs:
+% ndx  - n-vector with the cluster index for every node 
+%       (indices from 1 to k)
+% Pi   - Projection matrix [see Technical report
+% cost - cost of the partition (sum of broken edges)
+
+http://www.ece.ucsb.edu/~hespanha/published/tr-ell-gp.pdf
+
+Optimization
+
+MATLAB 7.2
+
+none required
+(Statistics Toolbox improves quality of partition)
+
+T:\techreps\ucsb\graph-partition-r2\grPartition.m
+
+Joao
+
+Hespanha
+
+hespanha@ece.ucsb.edu
+
+University of California, Santa Barbara
