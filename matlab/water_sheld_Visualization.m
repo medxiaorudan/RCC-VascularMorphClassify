@@ -65,7 +65,7 @@ figure;
 imshow(label2rgb(Ld1,'parula','w','shuffle')),title('distance transform after modified');
 
 %%
-imwrite(label2rgb(Ld,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/博士论文/figs/chapter4/over_seg1.png")
+imwrite(label2rgb(Ld,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/PhD/figs/chapter4/over_seg1.png")
 %%
 bw2 = I;
 bw2(Ld == 0) = 255;
@@ -83,7 +83,7 @@ imshow(label2rgb(D2,'parula','w','shuffle')),title('distance transform after mod
 figure;
 imshow(label2rgb(Ld2,'parula','w','shuffle')),title('distance transform after modified');
 %%
-imwrite(label2rgb(Ld2,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/博士论文/figs/chapter4/distance transform after modified1.png")
+imwrite(label2rgb(Ld2,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/PhD/figs/chapter4/distance transform after modified1.png")
 %%
 Ld2 = watershed(D2);
 a=unique(Ld2(1,:));
@@ -104,7 +104,7 @@ figure;
 imshow(label2rgb(Ld2,'parula','w','shuffle')),title('distance transform after modified');
 
 %%
-imwrite(label2rgb(Ld2,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/博士论文/figs/chapter4/REMOVE_distance transform after modified1.png")
+imwrite(label2rgb(Ld2,'parula','w','shuffle'),"C:/Users/rxiao/Desktop/PhD/figs/chapter4/REMOVE_distance transform after modified1.png")
 
 %%
 figure
