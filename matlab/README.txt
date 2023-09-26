@@ -20,6 +20,7 @@ scripts:
 	- 'nuclei_detection.m': some test script to detect the nuclei with basic morphological operations
 	- 'overlay_graphs_on_images.m': a script to show the graph detected on the image for illustration/evaluation purpose
 	- 'skeletonization.m': some tests
+	- 'water_sheld_Visualization.m': Visualization result of the water sheld algorithm
 
 and folders:
 	- 'external_functions': a few external functions used in the code
