@@ -15,5 +15,5 @@ This repository contains code for the paper [Renal Cell Carcinoma Classification
 
 
 <p float="left">
-  <img src="./images/HandCraftedFeatures_extraction.png" width="500" />
+  <img src="./images/HandCraftedFeatures_extraction.png" width="700" />
 </p>
