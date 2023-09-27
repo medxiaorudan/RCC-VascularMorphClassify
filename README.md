@@ -13,4 +13,4 @@ This repository contains code for the paper [Renal Cell Carcinoma Classification
 }
 ```
 
-![image](https://github.com/medxiaorudan/RCC-VascularMorphClassify/assets/22127304/71a38658-6a8b-4fec-9b7c-fa44a152f7ce)
+
