@@ -27,19 +27,25 @@ python python/Auto_get_patch_from_WSI_with_annotation.py
 
 Convert ```Vascular mask``` into the ```skeleton```
 ```
-run matlab/mask2skel.m
+matlab -r "run('matlab/mask2skel.m')"
 ```
 
 Extract ```Hand-crafted features```
 ```
-run matlab/collect_data_from_skeleton.m
+matlab -r "run('matlab/collect_data_from_skeleton.m')"
 ```
 
 ## Graph features extraction
-
+Extract ```Graph features``` from the skeletons
+```
+python python/Get_Graph_features.py
+```
 
 ## Features classification
-
+```
+chmod +x ClassifyScripts/Classify.sh
+./ClassifyScripts/Classify.sh
+```
 
 ## Citation
 If you use this work, please cite our paper:
