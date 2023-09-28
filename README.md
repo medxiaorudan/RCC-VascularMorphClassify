@@ -17,8 +17,7 @@ We present the first work to investigate the importance of geometric and topolog
 <p float="left">
   <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/HandCraftedFeatures_extraction.png" width="700" />
 </p>
-The data preparation steps can be found in [K-planes](https://github.com/sarafridov/K-Planes)
-[Steps for Generating Sub_Images](https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/Data_preparation_and_folder_structure.md)
+The data preparation steps can be found in [Steps for Generating Sub_Images](https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/Data_preparation_and_folder_structure.md)
 
 Get patch ```subimages``` with anotations
 ```
