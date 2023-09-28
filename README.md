@@ -8,7 +8,7 @@
 <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/classification_pipeline.png" width="700" > 
 </center>
 
-This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology".
+This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology" with hybrid codes. The Python code is mainly used to obtain patch images, graph feature extraction, and machine learning classification, while the Matlab code is mainly used to extract the manual features we proposed.
 
 ## Introduction
 We present the first work to investigate the importance of geometric and topological properties of the vascular network for Renal Cell Carcinoma (RCC) classification. Our proposed two sets of hand-crafted features, skeleton, and lattice features, which are extracted from the vascular network segmentation images, can classify RCC subtypes robustly.
@@ -17,9 +17,25 @@ We present the first work to investigate the importance of geometric and topolog
 <p float="left">
   <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/HandCraftedFeatures_extraction.png" width="700" />
 </p>
+The data preparation steps can be found in [Steps for Generating Sub_Images] (https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/Data%20preparation%20and%20folder%20structure.md#steps-for-generating-sub_images)
 
+Get patch ```subimages``` with Anotations
+```
+python python/Auto_get_patch_from_WSI_with_annotation.py
+```
+
+Convert ```Vascular mask``` into the ```skeleton```
+```
+run matlab/mask2skel.m
+```
+
+Extract ```Hand-Crafted features```
+```
+run matlab/collect_data_from_skeleton.m
+```
 
 ## Graph features extraction
+
 
 ## Features classification
 
