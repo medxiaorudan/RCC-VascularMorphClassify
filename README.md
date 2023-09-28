@@ -19,7 +19,7 @@ We present the first work to investigate the importance of geometric and topolog
 </p>
 The data preparation steps can be found in [Steps for Generating Sub_Images](https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/Data_preparation_and_folder_structure.md)
 
-Get patch ```subimages``` with Anotations
+Get patch ```subimages``` with anotations
 ```
 python python/Auto_get_patch_from_WSI_with_annotation.py
 ```
@@ -29,7 +29,7 @@ Convert ```Vascular mask``` into the ```skeleton```
 run matlab/mask2skel.m
 ```
 
-Extract ```Hand-Crafted features```
+Extract ```Hand-crafted features```
 ```
 run matlab/collect_data_from_skeleton.m
 ```
