@@ -10,7 +10,22 @@
 
 This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology".
 
+## Introduction
 
+
+## Data preparation and hand-crafted features extraction
+<p float="left">
+  <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/HandCraftedFeatures_extraction.png" width="700" />
+</p>
+
+
+## Graph features extraction
+
+## Features classification
+
+
+## Citation
+If you use this software package, please cite our paper:
 ```
 @inproceedings{xiao2021renal,
   title={Renal cell carcinoma classification from vascular morphology},
@@ -21,8 +36,3 @@ This is the official implementation of the paper "Renal Cell Carcinoma Classific
   organization={Springer}
 }
 ```
-
-
-<p float="left">
-  <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/HandCraftedFeatures_extraction.png" width="700" />
-</p>
