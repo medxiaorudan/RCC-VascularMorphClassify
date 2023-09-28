@@ -1,4 +1,4 @@
-# Steps for Generating Sub_Images
+# Steps_for_Generating_Sub_Images
 
 ## 1. Marking Areas
 
