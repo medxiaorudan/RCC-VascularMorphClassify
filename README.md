@@ -25,7 +25,7 @@ We present the first work to investigate the importance of geometric and topolog
 
 
 ## Citation
-If you use this software package, please cite our paper:
+If you use this work, please cite our paper:
 ```
 @inproceedings{xiao2021renal,
   title={Renal cell carcinoma classification from vascular morphology},
