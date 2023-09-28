@@ -3,6 +3,14 @@
 <a href="https://drive.google.com/file/d/14B3B8v7sqBfjbbfv0JRBoDAwEvked1v4/view?usp=drive_link"><img src="https://img.shields.io/badge/Poster%20-online-brightgreen"></a>
 <a href="https://drive.google.com/file/d/14HVZhJHgCjXJv8ckNz6lYVOBwBU_vMzA/view?usp=drive_link"><img src="https://img.shields.io/badge/Presentation%20-online-brightgreen"></a>
 <br>
+
+<center>
+<img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/classification_pipeline.png" width="100%" height="100%"> 
+</center>
+
+This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology".
+
+
 ```
 @inproceedings{xiao2021renal,
   title={Renal cell carcinoma classification from vascular morphology},
@@ -16,5 +24,5 @@
 
 
 <p float="left">
-  <img src="./images/HandCraftedFeatures_extraction.png" width="700" />
+  <img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/HandCraftedFeatures_extraction.png" width="700" />
 </p>
