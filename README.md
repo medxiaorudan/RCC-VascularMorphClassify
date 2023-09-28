@@ -11,7 +11,7 @@
 This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology".
 
 ## Introduction
-
+We present the first work to investigate the importance of geometric and topological properties of the vascular network for Renal Cell Carcinoma (RCC) classification. Our proposed two sets of hand-crafted features, skeleton, and lattice features, which are extracted from the vascular network segmentation images, can classify RCC subtypes robustly.
 
 ## Data preparation and hand-crafted features extraction
 <p float="left">
