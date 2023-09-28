@@ -5,7 +5,7 @@
 <br>
 
 <center>
-<img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/classification_pipeline.png" width="100%" height="100%"> 
+<img src="https://github.com/medxiaorudan/RCC-VascularMorphClassify/blob/main/images/classification_pipeline.png" width="700" > 
 </center>
 
 This is the official implementation of the paper "Renal Cell Carcinoma Classification from Vascular Morphology".
