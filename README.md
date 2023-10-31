@@ -58,4 +58,13 @@ If you use this work, please cite our paper:
   year={2021},
   organization={Springer}
 }
+
+@inproceedings{zubiolo2016vascular,
+  title={Is the vascular network discriminant enough to classify renal cell carcinoma?},
+  author={Zubiolo, Alexis and Debreuve, Eric and Ambrosetti, Damien and Pognonec, Philippe and Descombes, Xavier},
+  booktitle={2016 14th International Workshop on Content-Based Multimedia Indexing (CBMI)},
+  pages={1--6},
+  year={2016},
+  organization={IEEE}
+}
 ```
